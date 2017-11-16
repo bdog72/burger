@@ -57,6 +57,8 @@ const common = {
         {
           loader: 'postcss-loader',
           options: {
+            modules: true,
+            localIdentName: '[name]__[local]__[hash:base64:5]',
             plugins: () => {
               return [
                 require('autoprefixer')

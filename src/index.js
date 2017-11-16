@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import Redbox from 'redbox-react'
 
-import App from './components/App'
+import App from './components/App/App'
 
 import './styles/screen.scss'
 
@@ -19,8 +19,8 @@ const render = app => {
 render(<App />)
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    const NextApp = require('./components/App').default
+  module.hot.accept('./components/App/App', () => {
+    const NextApp = require('./components/App/App').default
     render(<NextApp />)
   })
 }
